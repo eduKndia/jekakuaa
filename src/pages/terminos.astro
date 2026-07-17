@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Términos y Condiciones — Jekakuaa";
+const description = "Términos y condiciones de uso del sitio web de Jekakuaa, consultoría TI en Paraguay.";
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <main class="pt-32 pb-20">
+    <article class="max-w-3xl mx-auto px-6 prose-content">
+      <a href="/" class="text-primary hover:text-accent text-sm font-medium inline-flex items-center gap-2 mb-8">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m12 19-7-7 7-7"/><path d="M19 12H5"/>
+        </svg>
+        Volver al inicio
+      </a>
+
+      <h1 class="text-4xl md:text-5xl font-bold text-primary-dark tracking-tight">Términos y Condiciones</h1>
+      <p class="text-gray-text mt-2">Última actualización: julio de 2026</p>
+
+      <div class="mt-12 space-y-8 text-gray-text">
+        <section>
+          <h2>1. Información general</h2>
+          <p>Los presentes Términos y Condiciones regulan el acceso y uso del sitio web de Jekakuaa, así como los servicios de consultoría TI ofrecidos a través de este canal. Al acceder y utilizar este sitio, aceptás los términos aquí descritos.</p>
+          <p>Jekakuaa es una empresa paraguaya de tecnología, fundada en 2020, con sede en Asunción, Paraguay. Ofrecemos servicios de consultoría TI, desarrollo de software a medida y transformación digital para empresas.</p>
+        </section>
+
+        <section>
+          <h2>2. Servicios ofrecidos</h2>
+          <p>A través de este sitio web, Jekakuaa ofrece información sobre los siguientes servicios:</p>
+          <ul>
+            <li>Consultoría en tecnologías de la información</li>
+            <li>Desarrollo de software a medida</li>
+            <li>Servicios de transformación digital</li>
+          </ul>
+          <p>La contratación efectiva de cualquier servicio se formalizará mediante acuerdo específico entre las partes, que establecerá alcance, plazos, costos y condiciones particulares.</p>
+        </section>
+
+        <section>
+          <h2>3. Uso del sitio web</h2>
+          <p>El usuario se compromete a utilizar este sitio web de forma lícita, sin realizar actividades que puedan dañar, sobrecargar o impedir su normal funcionamiento. Está prohibido:</p>
+          <ul>
+            <li>Reproducir, copiar o distribuir el contenido sin autorización</li>
+            <li>Utilizar el sitio para fines fraudulentos o ilícitos</li>
+            <li>Intentar acceder a áreas restringidas o sistemas no autorizados</li>
+            <li>Introducir virus, malware o cualquier código malicioso</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>4. Propiedad intelectual</h2>
+          <p>Todo el contenido presente en este sitio web (textos, imágenes, logotipos, diseños, código fuente) es propiedad de Jekakuaa o de terceros que han autorizado su uso. Queda prohibida su reproducción total o parcial sin autorización expresa y por escrito.</p>
+        </section>
+
+        <section>
+          <h2>5. Limitación de responsabilidad</h2>
+          <p>Jekakuaa no garantiza la disponibilidad ininterrumpida del sitio web ni la ausencia total de errores. No nos responsabilizamos por daños derivados del uso o la imposibilidad de uso del sitio, ni por el contenido de enlaces externos a sitios de terceros.</p>
+        </section>
+
+        <section>
+          <h2>6. Enlaces a terceros</h2>
+          <p>Este sitio puede contener enlaces a sitios web de terceros (WhatsApp, redes sociales, etc.). Jekakuaa no se responsabiliza por el contenido, políticas o prácticas de dichos sitios. El acceso a los mismos se realiza bajo responsabilidad del usuario.</p>
+        </section>
+
+        <section>
+          <h2>7. Protección de datos personales</h2>
+          <p>El tratamiento de datos personales se realiza conforme a la Ley N° 1682/2001 de la República del Paraguay. La información de contacto proporcionada a través de este sitio se utiliza exclusivamente para responder consultas y no se comparte con terceros sin consentimiento.</p>
+          <p>Para consultas sobre el tratamiento de tus datos personales, podés escribirnos a <a href="mailto:eduardo.kndia@gmail.com">eduardo.kndia@gmail.com</a>.</p>
+        </section>
+
+        <section>
+          <h2>8. Modificaciones</h2>
+          <p>Jekakuaa se reserva el derecho de modificar estos Términos y Condiciones en cualquier momento. Las modificaciones serán publicadas en esta misma página y entrarán en vigor desde su publicación.</p>
+        </section>
+
+        <section>
+          <h2>9. Ley aplicable y jurisdicción</h2>
+          <p>Los presentes términos se rigen por las leyes de la República del Paraguay. Para cualquier controversia derivada de la interpretación o aplicación de estos términos, las partes se someten a los tribunales competentes de la ciudad de Asunción, Paraguay.</p>
+        </section>
+
+        <section>
+          <h2>10. Contacto</h2>
+          <p>Para consultas sobre estos Términos y Condiciones, podés contactarnos por:</p>
+          <ul>
+            <li>Email: <a href="mailto:eduardo.kndia@gmail.com">eduardo.kndia@gmail.com</a></li>
+            <li>WhatsApp: <a href="https://wa.me/595981635329" target="_blank" rel="noopener noreferrer">+595 981 635 329</a></li>
+            <li>Ubicación: Asunción, Paraguay</li>
+          </ul>
+        </section>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</Layout>
