@@ -1,0 +1,43 @@
+<section class="py-20 md:py-28 bg-primary-very-light">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <span
+        class="text-sm font-semibold text-primary tracking-widest uppercase"
+        aria-hidden="true"
+      >Nuestro diferencial</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-primary-dark tracking-tight mt-3">
+        ¿Por qué elegirnos?
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      {
+        [
+          'Conocemos el mercado local',
+          'Ofrecemos soluciones a medida, no paquetes genéricos',
+          'Brindamos soporte cercano y continuo en español',
+          'Trabajamos con stack tecnológico moderno',
+          'Aplicamos metodologías ágiles y transparentes',
+          'Nos enfocamos en resultados medibles',
+        ].map((item) => (
+          <div class="flex items-start gap-3 p-5 bg-white border border-gray-border rounded-lg transition-all duration-300 hover:border-primary-light hover:shadow-sm">
+            <span class="shrink-0 w-6 h-6 rounded-full bg-primary-very-light flex items-center justify-center mt-0.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-3.5 h-3.5 text-primary"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="3"
+                aria-hidden="true"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
+            <span class="text-primary-dark font-medium leading-snug">{item}</span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,77 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+}
+
+const {
+  title,
+  description,
+  ogImage = '/og-image.svg',
+} = Astro.props;
+
+const siteURL = Astro.site ?? new URL('https://jekakuaa.vercel.app');
+const canonicalURL = new URL(Astro.url.pathname, siteURL);
+const ogImageURL = new URL(ogImage, siteURL);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Jekakuaa',
+  description:
+    'Consultoría TI y soluciones digitales para empresas paraguayas.',
+  url: 'https://jekakuaa.vercel.app',
+  email: 'eduardo.kndia@gmail.com',
+  telephone: '+595981635329',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Asunción',
+    addressCountry: 'PY',
+  },
+  foundingDate: '2020',
+  sameAs: [],
+};
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#5A8F7B" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:locale" content="es_PY" />
+    <meta property="og:site_name" content="Jekakuaa" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
+
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    <title>{title}</title>
+  </head>
+  <body class="bg-white text-primary-dark font-sans antialiased">
+    <slot />
+  </body>
+</html>
