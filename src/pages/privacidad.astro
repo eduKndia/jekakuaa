@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Política de Privacidad — Commerce IA Platform | Jekakuaa";
+const description = "Política de privacidad de Commerce IA Platform, solución de atención automatizada por WhatsApp para comercios, desarrollada por Jekakuaa.";
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <main class="pt-32 pb-20">
+    <article class="max-w-3xl mx-auto px-6 prose-content">
+      <a href="/" class="text-primary hover:text-accent text-sm font-medium inline-flex items-center gap-2 mb-8">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m12 19-7-7 7-7"/><path d="M19 12H5"/>
+        </svg>
+        Volver al inicio
+      </a>
+      
+      <h1 class="text-4xl md:text-5xl font-bold text-primary-dark tracking-tight">Política de Privacidad</h1>
+      <p class="text-gray-text mt-2">Última actualización: julio de 2026</p>
+      
+      <div class="mt-12 space-y-8 text-gray-text">
+        <section>
+          <h2>1. Información que recopilamos</h2>
+          <p>Commerce IA Platform accede a mensajes de WhatsApp exclusivamente para responder consultas de clientes sobre productos, precios, stock y ubicación del comercio que utiliza el servicio. No almacenamos mensajes fuera de los sistemas del propio comercio (por ejemplo, Google Sheets de su propiedad) y no compartimos datos con terceros.</p>
+          <p>Esta política aplica de forma genérica a todas las aplicaciones de prueba y despliegues del producto que Jekakuaa realiza para sus clientes.</p>
+        </section>
+        
+        <section>
+          <h2>2. Uso de la información</h2>
+          <p>Los mensajes recibidos se procesan automáticamente mediante inteligencia artificial (utilizando modelos como Groq u otros equivalentes) para clasificar la intención del cliente y generar respuestas. Se registran métricas anónimas (cantidad de consultas, productos más consultados, tiempo de respuesta) para la mejora continua del servicio.</p>
+          <p>Estas métricas no permiten identificar a personas individuales y se utilizan únicamente con fines de optimización del producto.</p>
+        </section>
+        
+        <section>
+          <h2>3. Almacenamiento</h2>
+          <p>Las conversaciones y métricas se almacenan en los sistemas definidos por cada comercio (por ejemplo, Google Sheets u hojas de cálculo de su propiedad), accesibles únicamente por el comercio titular de los datos. No se utilizan bases de datos externas ni servicios de terceros para almacenamiento de información personal sin el consentimiento expreso del comercio.</p>
+        </section>
+        
+        <section>
+          <h2>4. No compartimos datos</h2>
+          <p>No vendemos, alquilamos ni compartimos información personal con terceros. Los datos se utilizan únicamente para brindar el servicio de atención al cliente automatizado contratado por cada comercio.</p>
+        </section>
+        
+        <section>
+          <h2>5. Ejemplo de despliegue</h2>
+          <p>Como referencia, <strong>TechStore</strong> es una empresa ficticia utilizada como caso de prueba para Commerce IA Platform. Los datos y conversaciones asociados a este despliegue de ejemplo son generados artificialmente y no corresponden a clientes reales.</p>
+        </section>
+        
+        <section>
+          <h2>6. Cambios en esta política</h2>
+          <p>Jekakuaa puede modificar esta política de privacidad en cualquier momento. Las modificaciones serán publicadas en esta misma página y entrarán en vigor desde su publicación. Se recomienda revisarla periódicamente.</p>
+        </section>
+        
+        <section>
+          <h2>7. Contacto</h2>
+          <p>Para consultas sobre esta política de privacidad, podés contactarnos por:</p>
+          <ul>
+            <li>Email: <a href="mailto:eduardo.kndia@gmail.com">eduardo.kndia@gmail.com</a></li>
+            <li>WhatsApp: <a href="https://wa.me/595981635329" target="_blank" rel="noopener noreferrer">+595 981 635 329</a></li>
+            <li>Ubicación: Asunción, Paraguay</li>
+          </ul>
+        </section>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</Layout>
