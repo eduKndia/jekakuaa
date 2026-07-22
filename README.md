@@ -1,43 +1,96 @@
-# Astro Starter Kit: Minimal
+# Jekakuaa
 
-```sh
-pnpm create astro@latest -- --template minimal
+Landing page estática de **Jekakuaa** — Consultoría TI y soluciones digitales para empresas paraguayas.
+
+🌐 **Sitio online**: [jekakuaa.vercel.app](https://jekakuaa.vercel.app)
+
+## Stack
+
+- **[Astro 7](https://astro.build)** — Framework para sitios estáticos ultra rápidos
+- **[Tailwind CSS 4](https://tailwindcss.com)** — Estilos utility-first
+- **[Vercel](https://vercel.com)** — Hosting con SSL automático
+- **pnpm** — Package manager
+
+## Estructura del proyecto
+
 ```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
+jekakuaa/
+├── public/                    # Assets estáticos
+│   ├── favicon.svg            # Ícono del sitio
+│   ├── og-image.svg           # Imagen para compartir en redes
+│   └── robots.txt
 ├── src/
-│   └── pages/
-│       └── index.astro
+│   ├── components/            # Componentes Astro
+│   │   ├── Header.astro
+│   │   ├── Hero.astro
+│   │   ├── Services.astro
+│   │   ├── About.astro
+│   │   ├── WhyUs.astro
+│   │   ├── Contact.astro
+│   │   ├── Footer.astro
+│   │   └── WhatsAppFab.astro
+│   ├── layouts/
+│   │   └── Layout.astro       # Layout base con SEO
+│   ├── pages/                 # Rutas del sitio
+│   │   ├── index.astro        # Home
+│   │   ├── terminos.astro     # Términos y Condiciones
+│   │   └── privacidad.astro   # Política de Privacidad
+│   └── styles/
+│       └── global.css         # Tailwind + variables de tema
+├── astro.config.mjs
+├── tailwind.config.js
+├── tsconfig.json
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Desarrollo local
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Requisitos: Node.js >= 22.12, pnpm >= 9.
 
-Any static assets, like images, can be placed in the `public/` directory.
+```bash
+# Instalar dependencias
+pnpm install
 
-## 🧞 Commands
+# Levantar el dev server (http://localhost:4321)
+pnpm dev
 
-All commands are run from the root of the project, from a terminal:
+# Build de producción
+pnpm build
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+# Preview del build
+pnpm preview
+```
 
-## 👀 Want to learn more?
+## Deploy
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+El deploy es **automático** con cada `git push` a la rama `main`:
+
+1. Hacé los cambios que necesites
+2. `git add . && git commit -m "descripción del cambio"`
+3. `git push origin main`
+4. Vercel buildea y deploya en ~30-60 segundos
+
+Para ver el estado de los deploys: [vercel.com/dashboard](https://vercel.com/dashboard)
+
+## Paleta de colores
+
+| Token | Color | Uso |
+|---|---|---|
+| `primary` | `#4FA67A` | Botones, acentos, íconos |
+| `primary-light` | `#7BC4A0` | Hover, bordes sutiles |
+| `primary-very-light` | `#E5F4ED` | Backgrounds alternos |
+| `primary-dark` | `#1A5F4A` | Títulos, texto principal |
+| `accent` | `#2E8B6B` | Links, detalles destacados |
+| `whatsapp` | `#25D366` | Botón flotante WhatsApp |
+
+Las variables están definidas en `src/styles/global.css` dentro del bloque `@theme`.
+
+## Contacto
+
+- **Email**: eduardo.kndia@gmail.com
+- **WhatsApp**: +595 981 635 329
+- **Ubicación**: Asunción, Paraguay
+
+---
+
+© 2026 Jekakuaa — Hecho en Paraguay 🇵🇾
