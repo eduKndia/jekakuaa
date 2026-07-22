@@ -1,23 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import SimpleHeader from '../components/SimpleHeader.astro';
+import SimpleFooter from '../components/SimpleFooter.astro';
 
 const title = "Política de Privacidad — Commerce IA Platform | Jekakuaa";
 const description = "Política de privacidad de Commerce IA Platform, solución de atención automatizada por WhatsApp para comercios, desarrollada por Jekakuaa.";
 ---
 
 <Layout title={title} description={description}>
-  <Header />
+  <SimpleHeader />
   <main class="pt-32 pb-20">
     <article class="max-w-3xl mx-auto px-6 prose-content">
-      <a href="/" class="text-primary hover:text-accent text-sm font-medium inline-flex items-center gap-2 mb-8">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="m12 19-7-7 7-7"/><path d="M19 12H5"/>
-        </svg>
-        Volver al inicio
-      </a>
-      
       <h1 class="text-4xl md:text-5xl font-bold text-primary-dark tracking-tight">Política de Privacidad</h1>
       <p class="text-gray-text mt-2">Última actualización: julio de 2026</p>
       
@@ -66,5 +59,5 @@ const description = "Política de privacidad de Commerce IA Platform, solución 
       </div>
     </article>
   </main>
-  <Footer />
+  <SimpleFooter />
 </Layout>
